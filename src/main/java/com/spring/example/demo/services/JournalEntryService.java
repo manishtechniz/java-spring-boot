@@ -2,9 +2,9 @@ package com.spring.example.demo.services;
 
 import java.util.List;
 import java.util.Optional;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.bson.types.ObjectId;
 import com.spring.example.demo.entity.JournalEntry;
 import com.spring.example.demo.repositories.JournalEntryRepository;
 

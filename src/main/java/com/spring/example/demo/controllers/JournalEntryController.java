@@ -5,10 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.spring.example.demo.entity.JournalEntry;
 import com.spring.example.demo.services.JournalEntryService;
+import org.bson.types.ObjectId;
 
 @RestController
 @RequestMapping("journal")
@@ -31,6 +30,7 @@ public class JournalEntryController {
     public ResponseEntity<?> listJournalEntries()
     {
         List<JournalEntry> list = new ArrayList<JournalEntry>();
+
         list.addAll(journalEntryService.listEntries());
 
         if (list.isEmpty()) {
